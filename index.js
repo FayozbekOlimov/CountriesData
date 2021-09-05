@@ -9,7 +9,7 @@ mode.addEventListener('click', () => {
     variables.classList.toggle('light-root');
     modeImg.classList.toggle('animate-mode');
 
-    if(variables.className === 'light-root') {
+    if (variables.className === 'light-root') {
         modeText.innerText = 'Dark mode';
         modeImg.src = './img/dark_mode.svg';
     } else {
@@ -84,8 +84,8 @@ searchInput.addEventListener('input', (e) => {
 const region = cards.getElementsByClassName('region');
 
 function filterRegion(reg) {
-    for(let i = 0; i < region.length; i++) {
-        if(region[i].innerText === reg || reg === 'All') {
+    for (let i = 0; i < region.length; i++) {
+        if (region[i].innerText === reg || reg === 'All') {
             getParentElement(region[i], 3).classList.remove('hidden');
         } else {
             getParentElement(region[i], 3).classList.add('hidden');
@@ -108,15 +108,15 @@ const mybutton = document.querySelector(".upBtn");
 window.onscroll = scrollFunction;
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20   || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
