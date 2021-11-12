@@ -38,7 +38,7 @@ document.addEventListener('click', (e) => {
 
 // ========== CREATE COUNTRY CARDS ========== //
 
-const API = 'https://restcountries.eu/rest/v2/all';
+const API = 'http://api.countrylayer.com/v2/all?access_key=355ccc5f86821483f337c7a9d8864b34';
 const cards = document.querySelector('.main__cards');
 
 fetch(API)
@@ -50,10 +50,9 @@ function getResult(data) {
         const card = document.createElement('div');
         card.className = 'main__card';
         card.innerHTML = `
-            <img class="main__card-img" src="https://restcountries.eu/data/${country.alpha3Code.toLowerCase()}.svg">
+            <img class="main__card-img" src="https://flagcdn.com/${country.alpha2Code.toLowerCase()}.svg">
             <div class="main__content">
                 <h3 class="main__title">${country.name}</h3>
-                <p class="main__subtitle">Population: ${country.population.toLocaleString()}</p>
                 <p class="main__subtitle">Region: <span class="region">${country.region}</span></p>
                 <p class="main__subtitle">Capital: ${country.capital}</p>
             </div>
